@@ -26,14 +26,19 @@
 		</div>
 
 		<div class="textboxContainer">
+
 			<div class="username">
-				<label for="username"><b>Username</b></label> <input id="username"
-					type="text" placeholder="Enter Username" name="username" required>
+				<div class ="label">
+				<b>Username</b>
+				</div>
+				 <input id="username" type="text" placeholder="Enter Username" name="username" required>
 			</div>
+
 			<div class="password">
-				<label for="psw"><b>Password </b></label> <input id="password"
-					type="password" placeholder="Enter Password" name="password"
-					required>
+				<div class ="label">
+				<b>Password</b>
+				</div>
+				<input id="password" type="password" placeholder="Enter Password" name="password" required>
 				</div>
 				<div class="submitButton">
 					<button id="submit">Login</button>

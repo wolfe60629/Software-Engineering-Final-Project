@@ -13,18 +13,28 @@
 <script src="JScript/SendLogin.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="CSS\MainPage.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="CSS\MainPage.css?id=1234">
 
 <title>Web Application Main</title>
 </head>
 <body>
 
-	<div class = "navbar">
-	<h3 id = "userLabel">Welcome Back <?php echo $_SESSION['userlogin'] ?>!</h3> 
-	<h4 id = "logoutLabel"><a href= "LogoutProc.php">Logout</a></h4>
-	</div>
-	
-	
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <img src="/Images/bankLogo.png" height="80px" alt="bankLogo">
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav" style="margin-left:32%;">
+                <h1  class="text-xs-center"><?php echo $_SESSION['userlogin'];?>'s Dashboard</h1>
+            </div>
+            <div class="navbar-nav ml-auto">
+              <h4>  <a href="LogoutProc.php" class="nav-item nav-link"> <b>Logout</b></a></h4>
+            </div>
+        </div>
+    </nav>
+
+
 <div class="Assigned_Dealers">
 <h2>Assigned Dealerships</h2>
 <div class="panel panel-default"> <div class="row"><div class="col-sm-12 col-md-12"><table ui-jq="dataTable"  class="table table-striped b-t b-b dataTable no-footer" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
@@ -42,14 +52,14 @@
                         </tr>
                     </thead>
                     <tbody>
-					 <?php         
+					 <?php
 						include 'GetDealerRecordsProc.php';
-					
+
 					 ?>
 					 </tbody>
                     </table></div></div>
                     </div>
-				</div>	
-	
+				</div>
+
 </body>
 </html>

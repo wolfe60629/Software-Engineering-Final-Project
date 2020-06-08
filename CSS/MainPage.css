@@ -1,24 +1,23 @@
-body { 
+body {
 	background: black;
 	color: white;
 
 }
 
-.navbar { 
-	color:black;
-	background:white;
+.navbar-header #logo {
+	width:150px;
 }
-.navbar #userLabel { 
-    text-align: center;
-}
-
-.navbar #logoutLabel { 
-    text-align: right;
-	margin-right: 5px;
-}
-
 
 .Assigned_Dealers .panel {
 	color:black;
+
+}
+
+.navbar {
+ min-height: 80px;
+}
+
+.loanbutton { 
+margin-bottom: 5px;
 
 }
