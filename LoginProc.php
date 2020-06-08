@@ -3,7 +3,8 @@
 session_start();
 $config = parse_ini_file('C:\ServerFolders\PHP\Project\db.ini');
 #Temporary INI FIle For Linux Server
-$config = parse_ini_file('/home/jeremy/Documents/SoftwareEngineeringProject/Temporary/db.ini');
+$config = parse_ini_file('/home/jeremy/Documents/SoftwareEngineeringProject/Temporary/db.ini';
+
 $username = $_POST['username'];
 $password = $_POST['password'];
 $dbHost = $config['host'];
