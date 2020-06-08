@@ -11,8 +11,6 @@ if ($devPlatform = 'linux') {
 } elseif ($devPlatform = 'windows') {
   $config = parse_ini_file('C:\ServerFolders\PHP\Project\db.ini');
 }
-
-
 $username = $_POST['username'];
 $password = $_POST['password'];
 $dbHost = $config['host'];
