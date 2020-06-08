@@ -1,9 +1,17 @@
 <?php
 #DEFINE
 session_start();
-$config = parse_ini_file('C:\ServerFolders\PHP\Project\db.ini');
-#Temporary INI FIle For Linux Server
-$config = parse_ini_file('/home/jeremy/Documents/SoftwareEngineeringProject/Temporary/db.ini';
+
+
+#Added for linux development
+$devPlatform = parse_ini_file('devPlatform.ini')['platform'];
+
+if ($devPlatform = 'linux') {
+  $config = parse_ini_file('/home/jeremy/Documents/SoftwareEngineeringFinalProject/Temporary/db.ini');
+} elseif ($devPlatform = 'windows') {
+  $config = parse_ini_file('C:\ServerFolders\PHP\Project\db.ini');
+}
+
 
 $username = $_POST['username'];
 $password = $_POST['password'];
@@ -18,11 +26,11 @@ $connectionInfo = array(
     "PWD" => $dbPass
 );
 
-
 #VERBOSE
 ini_set('display_startup_errors', 1);
 ini_set('display_errors', 1);
 error_reporting(-1);
+
 
 
 
