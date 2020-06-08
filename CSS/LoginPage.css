@@ -1,0 +1,55 @@
+body { 
+	background-color : black;
+}
+
+.loginForm { 
+margin-top : 5%;
+text-align:center;
+}
+
+.loginForm #logo { 
+	width:30%;
+	padding-bottom: 5%;
+}
+
+.loginForm #username { 
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align:left;
+}
+
+.loginForm #password { 
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align:left;
+}
+
+
+.loginForm .username { 
+	padding-left: 4%;
+	margin-bottom : 10px;
+	margin-left: -40px;	
+	color: white;
+}
+.loginForm .password { 
+
+	padding-left: 4%;
+	margin-bottom : 20px;
+	margin-left: -40px;
+	color: white;
+}
+
+.loginForm .submitButton { 
+	margin-top: 10px;	
+}
+
+.loginForm #submit { 
+	padding-left : 75px;
+	padding-right :75px;
+	padding-top : 10px;
+	padding-bottom : 10px;
+}
+
+.textboxContainer{ 
+	text-align:center;
+}
