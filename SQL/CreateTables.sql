@@ -1,6 +1,6 @@
  CREATE TABLE USERS ( 
 	[USER_ID]            INT          PRIMARY KEY   NOT NULL   IDENTITY(1,1)            ,
-	[USERNAME]          VARCHAR(50)                 NOT NULL                            ,
+	[USERNAME]          VARCHAR(50)   UNIQUE        NOT NULL                            ,
 	[PASSWORD_HASH]      BINARY(64)                 NOT NULL                            ,
 	[LAST_LOGIN]         DATETIME                   NULL       DEFAULT(NULL)            ,
 	[CREATION_DATE]      DATETIME                   NULL       DEFAULT(GETDATE())       ,
@@ -44,32 +44,13 @@
 
 );
 
-  CREATE TABLE DEALER_INVENTORY (
-	[INVENTORY_ID]       INT         PRIMARY KEY    NOT NULL   IDENTITY(1,1)                        ,
-	[VEHICLE_ID]         INT                        NOT NULL                                        ,
-	[DEALER_ID]          INT                        NOT NULL                                        ,
-	[INVENTORYADDDATE]   DATETIME                   NOT NULL   DEFAULT(GETDATE())                   ,
-
-
-	CONSTRAINT  FK_INV_VEHICLE_ID FOREIGN KEY (VEHICLE_ID)
-		REFERENCES VEHICLE(VEHICLE_ID)
-			ON DELETE CASCADE
-			ON UPDATE CASCADE,
-	CONSTRAINT FK_INV_DEALER_ID FOREIGN KEY (DEALER_ID)
-		REFERENCES DEALER (DEALER_ID)
-			ON DELETE CASCADE
-			ON UPDATE CASCADE
- );
 
   CREATE TABLE LOAN (
-	[LOAN_ID]        INT    PRIMARY KEY    NOT NULL    IDENTITY(1001,1)     ,
+	[LOAN_ID]        INT    PRIMARY KEY    NOT NULL    IDENTITY(1,1)     ,
 	[DEALER_ID]      INT                   NOT NULL                         ,
 	[VEHICLE_ID]     INT    UNIQUE         NOT NULL                         ,
 	[LOAN_AMOUNT]    MONEY                 NOT NULL                         ,
 	[APR_RATE]       FLOAT                 NOT NULL                         ,
-	[LOAN_LENGTH]    INT                   NOT NULL                         ,
-	[MIN_PAYMENT]    MONEY                 NOT NULL                         ,
-	[CURR_PRINC_AMT] MONEY                 NOT NULL                         ,
 
 	CONSTRAINT  FK_LOAN_DEALER_ID FOREIGN KEY (DEALER_ID)
 		REFERENCES DEALER(DEALER_ID)
@@ -82,23 +63,25 @@
 			ON UPDATE CASCADE                                           
  );
 
-     CREATE TABLE TRANSACTIONS ( 
-	[TRANSACTION_ID]     INT         PRIMARY KEY    NOT NULL   IDENTITY(1,1)                          ,
-	[LOAN_ID]            INT                        NOT NULL                                          ,
-	[TRANSACTION_DATE]   DATETIME                   NOT NULL   DEFAULT(GETDATE())                     ,
-	[TRANSACTION_AMT]    MONEY                      NOT NULL                                          ,
+CREATE TRIGGER TRG_DEALER_ADD
+	ON DEALER
+	AFTER INSERT,DELETE
+	AS
+	BEGIN
+		SET NOCOUNT ON
+		INSERT INTO ASSIGNMENTS(USER_ID,DEALER_ID)
+		SELECT 
+		(SELECT USER_ID FROM USERS WHERE USERNAME LIKE '%ADMIN%'),
+		(SELECT INSERTED.DEALER_ID FROM INSERTED)
+	END;
+	
+CREATE TRIGGER TRG_DEALER_DEL
+	ON DEALER
+	AFTER DELETE
+	AS
+	BEGIN
+		SET NOCOUNT ON
+		   DELETE FROM ASSIGNMENTS
+    	    WHERE DEALER_ID = (SELECT DELETED.DEALER_ID FROM DELETED)
+	END;
 
-
-	CONSTRAINT FK_TRANS_LOAN_ID FOREIGN KEY (LOAN_ID)
-		REFERENCES LOAN (LOAN_ID)
- );
-
-
-
- drop table users;
- drop table dealer;
- drop table DEALER_INVENTORY;
- drop table loan;
- drop table transactions;
- drop table vehicle;
- drop table assignments;

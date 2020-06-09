@@ -1,55 +1,54 @@
-body { 
-	background-color : black;
+body {
+background: radial-gradient(circle, rgba(2,0,36,1) 1%, rgba(75,161,176,1) 94%);
 }
 
-.loginForm { 
-margin-top : 5%;
-text-align:center;
+.loginForm {
+			margin-top: 7%;
+	    margin-left: 35%;
+	    margin-right: 35%;
+	    padding-top: 3%;
+	    text-align: center;
+	    padding-bottom: 4%;
+	    background-color: #112431;
+	    border-radius: 20%;
 }
 
-.loginForm #logo { 
-	width:30%;
-	padding-bottom: 5%;
+.loginForm #logo {
+	width:287px;
+	padding-bottom: 10px;
 }
 
-.loginForm #username { 
-	padding-left: 10px;
-	padding-right: 10px;
-	text-align:left;
-}
-
-.loginForm #password { 
-	padding-left: 10px;
-	padding-right: 10px;
-	text-align:left;
-}
-
-
-.loginForm .username { 
-	padding-left: 4%;
+.loginForm #username {
 	margin-bottom : 10px;
-	margin-left: -40px;	
-	color: white;
-}
-.loginForm .password { 
-
-	padding-left: 4%;
-	margin-bottom : 20px;
-	margin-left: -40px;
-	color: white;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align:left;
 }
 
-.loginForm .submitButton { 
-	margin-top: 10px;	
+.loginForm #password {
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align:left;
+	margin-bottom : 10px;
 }
 
-.loginForm #submit { 
-	padding-left : 75px;
-	padding-right :75px;
-	padding-top : 10px;
-	padding-bottom : 10px;
+
+
+.loginForm .submitButton {
+	margin-top: 10px;
 }
 
-.textboxContainer{ 
-	text-align:center;
+.loginForm #submit {
+	padding-left : 20px;
+	padding-right :20px;
+	padding-top : 2px;
+	padding-bottom : 2px;
+}
+
+.textboxContainer{
+
+}
+.textboxContainer .label{
+	color:white;
+	padding-right: 130px;
 }

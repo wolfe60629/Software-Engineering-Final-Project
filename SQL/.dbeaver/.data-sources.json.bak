@@ -1,0 +1,38 @@
+{
+	"folders": {},
+	"connections": {
+		"microsoft-172998bfd92-12c268b76615a3b": {
+			"provider": "sqlserver",
+			"driver": "microsoft",
+			"name": "LoanManagementProject",
+			"save-password": true,
+			"show-system-objects": true,
+			"read-only": false,
+			"configuration": {
+				"host": "192.168.0.50",
+				"port": "1433",
+				"database": "LoanManagementProject",
+				"url": "jdbc:sqlserver://;serverName=192.168.0.50;databaseName=LoanManagementProject",
+				"type": "dev",
+				"properties": {
+					"trustServerCertificate": "true"
+				},
+				"provider-properties": {
+					"@dbeaver-authentication@": "SQL_SERVER_PASSWORD",
+					"@dbeaver-show-all-schemas@": "false"
+				},
+				"handlers": {}
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false
+		}
+	}
+}
