@@ -4,9 +4,9 @@ session_start();
 $User_ID = $_SESSION['User_ID'];
 $devPlatform = parse_ini_file('devPlatform.ini')['platform'];
 #Added for linux development
-if ($devPlatform = 'linux') {
+if ($devPlatform === 'linux') {
   $config = parse_ini_file('/home/jeremy/Documents/SoftwareEngineeringFinalProject/Temporary/db.ini');
-} elseif ($devPlatform = 'windows') {
+} elseif ($devPlatform === 'windows') {
   $config = parse_ini_file('C:\ServerFolders\PHP\Project\db.ini');
 }
 $dbHost = $config['host'];

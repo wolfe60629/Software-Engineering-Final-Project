@@ -6,9 +6,9 @@ session_start();
 #Added for linux development
 $devPlatform = parse_ini_file('devPlatform.ini')['platform'];
 
-if ($devPlatform = 'linux') {
+if ($devPlatform === 'linux') {
   $config = parse_ini_file('/home/jeremy/Documents/SoftwareEngineeringFinalProject/Temporary/db.ini');
-} elseif ($devPlatform = 'windows') {
+} elseif ($devPlatform === 'windows') {
   $config = parse_ini_file('C:\ServerFolders\PHP\Project\db.ini');
 }
 $username = $_POST['username'];
