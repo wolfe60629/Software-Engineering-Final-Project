@@ -22,7 +22,7 @@
 <body>
 
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-            <img src="/Images/bankLogo.png" height="80px" alt="bankLogo">
+            <img src="Images/bankLogo.png" height="80px" alt="bankLogo">
 
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav" style="margin-left:32%;">
