@@ -46,20 +46,20 @@ if ($_POST["username"] || $_POST["password"])
 	}
 
 	#Query Database
-	$query = "select count(*) as \"Count\" from users where username= '" . $username . "' AND password_hash = HASHBYTES('SHA2_512', '" . $password . "');";
+	$query = "select IS_SUPERVISOR from users where username= '" . $username . "' AND password_hash = HASHBYTES('SHA2_512', '" . $password . "');";
     $result = sqlsrv_query($conn , $query);
 
     $row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC);
 
 
 	#CHECK TO SEE IF CRED ARE RIGHT
-			if ($row['Count'] == 1) {
+			if ($row != NULL) {
 				echo "1";
 				$_SESSION['userlogin'] = $username;
+				$_SESSION['Is_Supervisor'] = $row['IS_SUPERVISOR'];
 			}else {
 				$message = "Username and/or Password incorrect.";
 				echo $message;
-
 			}
 		sqlsrv_close($conn);
 
