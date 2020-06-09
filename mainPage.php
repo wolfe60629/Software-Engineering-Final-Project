@@ -36,7 +36,7 @@
 
 
 <div class="Assigned_Dealers">
-<h2>Assigned Dealerships</h2>
+<h2 class = "panel-heading">Assigned Dealerships</h2>
 <div class="panel panel-default"> <div class="row"><div class="col-sm-12 col-md-12"><table ui-jq="dataTable"  class="table table-striped b-t b-b dataTable no-footer" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
                     <thead>
                         <tr role="row" class="font-bold text-center no_border">

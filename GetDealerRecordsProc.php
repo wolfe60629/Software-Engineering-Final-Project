@@ -43,7 +43,7 @@ error_reporting(-1);
 	   echo "<tr role=\"row\" class=\"odd\">";
             while ($data = sqlsrv_fetch_array($sql)) {
 
-                echo '<tr>';
+                echo '<tr class = "text-center">';
                 echo"<td>" . $data['Dealer_Name'] . "</td>";
 				echo"<td>" . "</td>";
 				echo"<td>" . $data['Address1'] . "</td>";

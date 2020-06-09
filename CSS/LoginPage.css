@@ -1,10 +1,16 @@
 body {
-	background-color : black;
+background: radial-gradient(circle, rgba(2,0,36,1) 1%, rgba(75,161,176,1) 94%);
 }
 
 .loginForm {
-margin-top : 5%;
-margin-left: 40%;
+			margin-top: 7%;
+	    margin-left: 35%;
+	    margin-right: 35%;
+	    padding-top: 3%;
+	    text-align: center;
+	    padding-bottom: 4%;
+	    background-color: #04071b;
+	    border-radius: 5%;
 }
 
 .loginForm #logo {
@@ -40,12 +46,9 @@ margin-left: 40%;
 }
 
 .textboxContainer{
-	text-align:right;
-	width: fit-content;
-	margin-left: 44px;
+
 }
 .textboxContainer .label{
-	text-align:left;
 	color:white;
-	width: fit-content;
+	padding-right: 130px;
 }

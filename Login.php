@@ -21,6 +21,7 @@
 </head>
 <body>
 	<form class = "loginForm">
+		<h2 style= "color:white; display:contents;"><i>Loans Reimagined</i></h2>
 		<div class="logoContainer">
 			 <img id="logo" src="Images/bankLogo.png" alt="logo" class="logoImg">
 		</div>
@@ -44,7 +45,6 @@
 					<button id="submit">Login</button>
 					</div>
 		</div>
-
 	</form>
 </body>
 </html>
