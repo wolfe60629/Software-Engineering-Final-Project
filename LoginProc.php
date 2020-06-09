@@ -11,6 +11,7 @@ if ($devPlatform === 'linux') {
 } elseif ($devPlatform === 'windows') {
   $config = parse_ini_file('C:\ServerFolders\PHP\Project\db.ini');
 }
+echo $devPlatform;
 $username = $_POST['username'];
 $password = $_POST['password'];
 $dbHost = $config['host'];
@@ -23,7 +24,6 @@ $connectionInfo = array(
     "UID" => $dbUser,
     "PWD" => $dbPass
 );
-
 #VERBOSE
 ini_set('display_startup_errors', 1);
 ini_set('display_errors', 1);
