@@ -1,5 +1,7 @@
 <?php
 ####################DEFINE#############################################################
+session_start();
+$User_ID = $_SESSION['User_ID'];
 $devPlatform = parse_ini_file('devPlatform.ini')['platform'];
 #Added for linux development
 if ($devPlatform = 'linux') {
@@ -36,16 +38,16 @@ error_reporting(-1);
 	}
 
 #Query Database
-	$query = "select Dealer_Name, Address1, Address2, City, [State], [Zip], '500' as \"Dealer_Score\" from dealer;";
+	$query = "exec GetAssignedDealers @user_id = " . $User_ID;
     $sql = sqlsrv_query($conn , $query);
 
 #Print To Table
 	   echo "<tr role=\"row\" class=\"odd\">";
             while ($data = sqlsrv_fetch_array($sql)) {
 
-                echo '<tr class = "text-center">';
-                echo"<td>" . $data['Dealer_Name'] . "</td>";
-				echo"<td>" . "</td>";
+        echo '<tr class = "text-center">';
+        echo"<td>" . $data['Dealer_Name'] . "</td>";
+				echo"<td>" . $data['Count'] . "</td>";
 				echo"<td>" . $data['Address1'] . "</td>";
 				echo"<td>" . $data['Address2'] . "</td>";
 				echo"<td>" . $data['City'] . "</td>";

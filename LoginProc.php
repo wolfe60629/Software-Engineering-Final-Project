@@ -46,7 +46,7 @@ if ($_POST["username"] || $_POST["password"])
 	}
 
 	#Query Database
-	$query = "select IS_SUPERVISOR from users where username= '" . $username . "' AND password_hash = HASHBYTES('SHA2_512', '" . $password . "');";
+	$query = "select USER_ID, IS_SUPERVISOR from users where username= '" . $username . "' AND password_hash = HASHBYTES('SHA2_512', '" . $password . "');";
     $result = sqlsrv_query($conn , $query);
 
     $row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC);
@@ -56,7 +56,12 @@ if ($_POST["username"] || $_POST["password"])
 			if ($row != NULL) {
 				echo "1";
 				$_SESSION['userlogin'] = $username;
-				$_SESSION['Is_Supervisor'] = $row['IS_SUPERVISOR'];
+        $_SESSION['User_ID'] = $row['USER_ID'];
+        #set supervisor if supervisor
+        if ($row['IS_SUPERVISOR'] = 1) {
+          		$_SESSION['Is_Supervisor'] = 1;
+        }
+
 			}else {
 				$message = "Username and/or Password incorrect.";
 				echo $message;

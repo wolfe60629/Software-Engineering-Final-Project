@@ -46,14 +46,11 @@
 
 
   CREATE TABLE LOAN (
-	[LOAN_ID]        INT    PRIMARY KEY    NOT NULL    IDENTITY(1001,1)     ,
+	[LOAN_ID]        INT    PRIMARY KEY    NOT NULL    IDENTITY(1,1)     ,
 	[DEALER_ID]      INT                   NOT NULL                         ,
 	[VEHICLE_ID]     INT    UNIQUE         NOT NULL                         ,
 	[LOAN_AMOUNT]    MONEY                 NOT NULL                         ,
 	[APR_RATE]       FLOAT                 NOT NULL                         ,
-	[LOAN_LENGTH]    INT                   NOT NULL                         ,
-	[MIN_PAYMENT]    MONEY                 NOT NULL                         ,
-	[CURR_PRINC_AMT] MONEY                 NOT NULL                         ,
 
 	CONSTRAINT  FK_LOAN_DEALER_ID FOREIGN KEY (DEALER_ID)
 		REFERENCES DEALER(DEALER_ID)
