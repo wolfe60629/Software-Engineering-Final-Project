@@ -54,12 +54,17 @@ if ($_POST["username"] || $_POST["password"])
 
 	#CHECK TO SEE IF CRED ARE RIGHT
 			if ($row != NULL) {
-				echo "1";
+
 				$_SESSION['userlogin'] = $username;
         $_SESSION['User_ID'] = $row['USER_ID'];
+
         #set supervisor if supervisor
         if ($row['IS_SUPERVISOR'] = 1) {
           		$_SESSION['Is_Supervisor'] = 1;
+              echo $row['IS_SUPERVISOR'];
+
+        } else if ($row['IS_SUPERVISOR'] = 0){
+              echo $row['IS_SUPERVISOR'];
         }
 
 			}else {
