@@ -67,10 +67,10 @@ $('#submit').click(function(e){
 		data: {username: username , password: password},
 		success: function(data) {
 
-			if ($.trim(data) === "0") {
-				setTimeout(' window.location.href = "mainPage.php"', 200);
-			}else if ($.trim(data) === "1"){
-				setTimeout(' window.location.href = "supervisorPage.php"', 200);
+			if ($.trim(data) == "0") {
+				setTimeout('window.location.href = "mainPage.php"', 200);
+			}else if ($.trim(data) == "1"){
+				setTimeout('window.location.href = "supervisorPage.php"', 200);
 			}else {
 				alert(data);
 			};

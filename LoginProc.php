@@ -59,11 +59,11 @@ if ($_POST["username"] || $_POST["password"])
         $_SESSION['User_ID'] = $row['USER_ID'];
 
         #set supervisor if supervisor
-        if ($row['IS_SUPERVISOR'] = 1) {
+        if ($row['IS_SUPERVISOR'] == 1) {
           		$_SESSION['Is_Supervisor'] = 1;
               echo $row['IS_SUPERVISOR'];
-
-        } else if ($row['IS_SUPERVISOR'] = 0){
+        }
+        if ($row['IS_SUPERVISOR'] == 0){
               echo $row['IS_SUPERVISOR'];
         }
 
