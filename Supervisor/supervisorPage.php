@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	if(!isset($_SESSION['userlogin'])) {
-		header("Location: Login.php");
+		header("Location: /Login.php");
 	}
 
 
@@ -21,15 +21,13 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-            <img src="Images/bankLogo.png" height="80px" alt="bankLogo">
+    <nav class="navbar navbar-expand-md navbar-dark container-fluid-nav">
+            <img src="/Images/bankLogo.png" height="80px" alt="bankLogo">
 
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav" style="margin-left:32%;">
-                <h1  class="text-xs-center"><?php echo $_SESSION['userlogin'];?>'s Dashboard</h1>
-            </div>
-            <div class="navbar-nav ml-auto">
-              <h4>  <a href="LogoutProc.php" class="nav-item nav-link"> <b>Logout</b></a></h4>
+            <div class="navbar-nav" style="">
+                <h1 class="text-center title-nav"><?php echo $_SESSION['userlogin'];?>'s Dashboard - Supervisor Level</h1>
+              <h4 class= "text-right"> <a href="/LogoutProc.php" class="btn btn-secondary btn-lg active"> <b>Logout</b></a></h4>
             </div>
         </div>
     </nav>

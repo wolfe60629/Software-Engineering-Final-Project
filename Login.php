@@ -68,9 +68,9 @@ $('#submit').click(function(e){
 		success: function(data) {
 
 			if ($.trim(data) == "0") {
-				setTimeout('window.location.href = "mainPage.php"', 200);
+				setTimeout('window.location.href = "Employee/mainPage.php"', 200);
 			}else if ($.trim(data) == "1"){
-				setTimeout('window.location.href = "supervisorPage.php"', 200);
+				setTimeout('window.location.href = "Supervisor/supervisorPage.php"', 200);
 			}else {
 				alert(data);
 			};
