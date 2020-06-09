@@ -2,7 +2,7 @@
 ####################DEFINE#############################################################
 session_start();
 $User_ID = $_SESSION['User_ID'];
-$devPlatform = parse_ini_file('devPlatform.ini')['platform'];
+$devPlatform = parse_ini_file('../devPlatform.ini')['platform'];
 #Added for linux development
 if ($devPlatform === 'linux') {
   $config = parse_ini_file('/home/jeremy/Documents/SoftwareEngineeringFinalProject/Temporary/db.ini');
