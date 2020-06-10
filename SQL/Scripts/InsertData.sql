@@ -4,4 +4,7 @@ INSERT INTO DEALER(DEALER_NAME,ADDRESS1,ADDRESS2,CITY,STATE,ZIP)
 VALUES ('Test Dealer','123 Bord Street', '','Dawsonville', 'GA', 30534);
 
 
-SELECT * FROM dealer 
+SELECT * FROM users
+
+insert into assignments (dealer_id,user_id)
+values (15,3)

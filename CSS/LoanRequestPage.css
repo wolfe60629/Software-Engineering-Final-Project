@@ -1,0 +1,45 @@
+body {
+	background: black;
+	color: white;
+
+}
+
+.Vehicle_Information {
+	  margin-left: 27%;
+		margin-top:50px;
+}
+
+.Vehicle_Information h3 {
+	 margin-bottom:10px;
+	 margin-top:10px;
+}
+
+.navbar-header #logo {
+	width:150px;
+}
+
+.Assigned_Dealers .panel {
+	color:black;
+
+}
+
+.navbar {
+ min-height: 80px;
+ background: radial-gradient(circle, rgba(2,0,36,1) 1%, rgba(75,161,176,1) 94%);
+}
+
+.navbar-nav {
+	margin-left: auto;
+  margin-right: auto;
+	width:100%;
+}
+
+.title-nav {
+	width:100%;
+	margin-right: 80px;
+}
+
+.loanbutton {
+margin-bottom: 5px;
+
+}

@@ -1,7 +1,11 @@
 <?php
 	session_start();
 	if(isset($_SESSION['userlogin'])) {
-		header("Location: mainPage.php");
+		if (isset($_SESSION['Is_Supervisor'])) {
+			header("Location: Supervisor/supervisorPage.php");
+		}else {
+			header("Location: Employee/mainPage.php");
+		}
 	}
 ?>
 
