@@ -54,12 +54,12 @@ error_reporting(-1);
 				echo"<td>" . $data['State'] . "</td>";
 				echo"<td>" . $data['Zip'] . "</td>";
 				echo"<td>" . $data['Dealer_Score'] . "</td>";
-				echo "<td><button type=\"button\" class=\"btn btn-success loanbutton\">View Loans</button> <button type=\"button\" onclick=\"window.location.href='../LoanRequestPage.php#Dealership_Name=" . str_replace(' ','%20',$data['Dealer_Name']) . "&Dealership_ID=" . $data['Zip'] . "'\"" . " class=\"btn btn-success\">Create New Loan</button> </td>";
-                echo '</tr>';
-            }
+        echo "<td><button type=\"button\" class=\"btn btn-success loanbutton\">View Loans</button>
+                  <button type=\"button\" class=\"btn btn-success\" onClick=\"sendPostAddLoanProc('". $data['DEALER_ID']  . "','" . $data['Dealer_Name'] . "')\">Create New Loan</button> </td>";
 
+                echo '</tr>';
         echo "</tr>";
 
-
+}
 		sqlsrv_close($conn);
 ?>

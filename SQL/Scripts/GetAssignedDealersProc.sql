@@ -12,7 +12,8 @@ BEGIN
 	d.City, 
 	d.[State], 
 	d.[Zip], 
-	'500' as "Dealer_Score"
+	'500' as "Dealer_Score",
+	d.DEALER_ID 
 	from dealer d
 	join ASSIGNMENTS a
 	on d.dealer_id = a.dealer_id

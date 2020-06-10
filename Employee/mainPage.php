@@ -52,12 +52,24 @@
                     <tbody>
 					 <?php
 						include 'GetDealerRecordsProc.php';
-
 					 ?>
 					 </tbody>
-                    </table></div></div>
-                    </div>
+                    </table>
+									</div>
+								</div>
+              </div>
 				</div>
 
 </body>
 </html>
+
+<script>
+function sendPostAddLoanProc(Dealership_ID,Dealership_Name)  {
+	var form = $('<form action="' + '../LoanRequestPage.php' + '" method="post">' +
+  '<input type="text" name="Dealership_ID" value="' + Dealership_ID + '" />' +
+	'<input type="text" name="Dealership_Name" value="' + Dealership_Name + '" />' +
+  '</form>');
+$('body').append(form);
+form.submit();
+}
+</script>
