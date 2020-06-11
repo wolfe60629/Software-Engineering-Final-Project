@@ -24,7 +24,8 @@
 	[ADDRESS2]           VARCHAR(50)                NOT NULL                                      ,
 	[CITY]               VARCHAR(20)                NOT NULL                                      ,
 	[STATE]              VARCHAR(30)                NOT NULL                                      ,
-	[ZIP]                INT                        NOT NULL                                     
+	[ZIP]                INT                        NOT NULL                                      ,
+	[DEALER_SCORE]       INT                        NULL     
  );
 
  CREATE TABLE ASSIGNMENTS (
