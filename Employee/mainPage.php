@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	if(!isset($_SESSION['userlogin'])) {
-		header("Location: Login.php");
+		header("Location: ../Login.php");
 	}
 
 
@@ -21,15 +21,13 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-            <img src="Images/bankLogo.png" height="80px" alt="bankLogo">
+    <nav class="navbar navbar-expand-md navbar-dark container-fluid-nav">
+            <img src="../Images/bankLogo.png" height="80px" alt="bankLogo">
 
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav" style="margin-left:32%;">
-                <h1  class="text-xs-center"><?php echo $_SESSION['userlogin'];?>'s Dashboard</h1>
-            </div>
-            <div class="navbar-nav ml-auto">
-              <h4>  <a href="LogoutProc.php" class="nav-item nav-link"> <b>Logout</b></a></h4>
+            <div class="navbar-nav" style="">
+                <h1 class="text-center title-nav"><?php echo $_SESSION['userlogin'];?>'s Dashboard</h1>
+              <h4 class= "text-right"> <a href="../LogoutProc.php" class="btn btn-secondary btn-lg active"> <b>Logout</b></a></h4>
             </div>
         </div>
     </nav>
@@ -54,12 +52,31 @@
                     <tbody>
 					 <?php
 						include 'GetDealerRecordsProc.php';
-
 					 ?>
 					 </tbody>
-                    </table></div></div>
-                    </div>
+                    </table>
+									</div>
+								</div>
+              </div>
 				</div>
 
 </body>
 </html>
+
+<script>
+function sendPostAddLoanProc(Dealership_ID,Dealership_Name)  {
+	var form = $('<form action="' + '../LoanRequestPage.php' + '" method="post">' +
+  '<input type="text" name="Dealership_ID" value="' + Dealership_ID + '" />' +
+	'<input type="text" name="Dealership_Name" value="' + Dealership_Name + '" />' +
+  '</form>');
+$('body').append(form);
+form.submit();
+}
+function sendPostViewLoanProc(Dealership_ID)  {
+	var form = $('<form action="' + '../ViewLoanPage.php' + '" method="post">' +
+  '<input type="text" name="Dealership_ID" value="' + Dealership_ID + '" />' +
+  '</form>');
+$('body').append(form);
+form.submit();
+}
+</script>

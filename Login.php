@@ -1,7 +1,11 @@
 <?php
 	session_start();
 	if(isset($_SESSION['userlogin'])) {
-		header("Location: mainPage.php");
+		if (isset($_SESSION['Is_Supervisor'])) {
+			header("Location: Supervisor/supervisorPage.php");
+		}else {
+			header("Location: Employee/mainPage.php");
+		}
 	}
 ?>
 
@@ -67,10 +71,10 @@ $('#submit').click(function(e){
 		data: {username: username , password: password},
 		success: function(data) {
 
-			if ($.trim(data) === "0") {
-				setTimeout(' window.location.href = "mainPage.php"', 200);
-			}else if ($.trim(data) === "1"){
-				setTimeout(' window.location.href = "supervisorPage.php"', 200);
+			if ($.trim(data) == "0") {
+				setTimeout('window.location.href = "Employee/mainPage.php"', 200);
+			}else if ($.trim(data) == "1"){
+				setTimeout('window.location.href = "Supervisor/supervisorPage.php"', 200);
 			}else {
 				alert(data);
 			};

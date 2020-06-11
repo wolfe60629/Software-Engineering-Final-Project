@@ -2,7 +2,7 @@
 ####################DEFINE#############################################################
 session_start();
 $User_ID = $_SESSION['User_ID'];
-$devPlatform = parse_ini_file('devPlatform.ini')['platform'];
+$devPlatform = parse_ini_file('../devPlatform.ini')['platform'];
 #Added for linux development
 if ($devPlatform === 'linux') {
   $config = parse_ini_file('/home/jeremy/Documents/SoftwareEngineeringFinalProject/Temporary/db.ini');
@@ -44,7 +44,6 @@ error_reporting(-1);
 #Print To Table
 	   echo "<tr role=\"row\" class=\"odd\">";
             while ($data = sqlsrv_fetch_array($sql)) {
-
         echo '<tr class = "text-center">';
         echo"<td>" . $data['Dealer_Name'] . "</td>";
 				echo"<td>" . $data['Count'] . "</td>";
@@ -54,12 +53,12 @@ error_reporting(-1);
 				echo"<td>" . $data['State'] . "</td>";
 				echo"<td>" . $data['Zip'] . "</td>";
 				echo"<td>" . $data['Dealer_Score'] . "</td>";
-				echo "<td><button type=\"button\" class=\"btn btn-success loanbutton\">View Loans</button> <button type=\"button\" class=\"btn btn-success\">Create New Loan</button> </td>";
-                echo '</tr>';
-            }
+        echo "<td><button type=\"button\" class=\"btn btn-success loanbutton\" onClick=\"sendPostViewLoanProc('". $data['DEALER_ID'] . "')\">View Loans</button>
+                  <button type=\"button\" class=\"btn btn-success\" onClick=\"sendPostAddLoanProc('". $data['DEALER_ID']  . "','" . $data['Dealer_Name'] . "')\">Create New Loan</button> </td>";
 
+                echo '</tr>';
         echo "</tr>";
 
-
+}
 		sqlsrv_close($conn);
 ?>
