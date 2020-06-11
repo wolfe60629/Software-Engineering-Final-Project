@@ -1,18 +1,18 @@
-CREATE PROCEDURE GetAssignedDealers
+ALTER PROCEDURE GetAssignedDealers
 (
 	@USER_ID int
 )
 AS
 BEGIN
 	select
-	d.Dealer_Name,
+	UPPER(d.Dealer_Name) AS "Dealer_Name",
 	c.[Count],
-	d.Address1, 
-	d.Address2, 
-	d.City, 
-	d.[State], 
+	UPPER(d.Address1) as "Address1" , 
+	UPPER(d.Address2) as "Address2", 
+	UPPER(d.City) as "City", 
+	UPPER(d.[State]) as "State", 
 	d.[Zip], 
-	'500' as "Dealer_Score",
+	d.Dealer_Score as "Dealer_Score",
 	d.DEALER_ID 
 	from dealer d
 	join ASSIGNMENTS a

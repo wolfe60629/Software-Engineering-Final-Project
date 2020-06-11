@@ -1,4 +1,4 @@
-CREATE PROCEDURE GETLOANRECORDSPROC
+Alter PROCEDURE GETLOANRECORDSPROC
 (
 	@Dealer_ID int
 )
@@ -7,9 +7,9 @@ BEGIN
 	SELECT 
 	LOAN_ID as "Loan_ID",
 	[YEAR] as "Year",
-	MAKE as "Make",
-	MODEL as "Model",
-	VIN as "VIN",
+	UPPER(MAKE) as "Make",
+	UPPER(MODEL) as "Model",
+	UPPER(VIN) as "VIN",
 	LOAN_AMOUNT as "Loan_Amount",
 	APR_RATE AS "APR"
 	FROM LOAN L

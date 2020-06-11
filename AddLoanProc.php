@@ -30,8 +30,7 @@ ini_set('display_errors', 1);
 error_reporting(-1);
 
 
-if ($_POST["vin"])
-{
+
   $ID = $_POST['Dealership_ID'];
   $year = $_POST['year'];
   $make = $_POST['make'];
@@ -46,21 +45,23 @@ if ($_POST["vin"])
 	#Check Connection
     if (!$conn)
     {
-        echo "Connection could not be established";
+        $queryErrors = sqlsrv_errors();
+        echo "<script type='text/javascript'>alert('$queryErrors');</script>";
         die(print_r(sqlsrv_errors() , true));
+
 	   }
 
 	#Query Database
 
-	$query = "exec INSERTLOANPROC @Dealer_ID=" . $ID . ", @CarYear=" . $year . ", @Make=" . $make . ", @Model=" . $model . ", @VIN=" . $vin . ", @Loan_Amount=" . $loan_amount . ", @APR_RATE=" . $APR_Rate;
-  sqlsrv_query($conn , $query);
+	$query = "exec INSERTLOANPROC @Dealer_ID=" . $ID . ", @CarYear=" . $year . ", @Make='" . $make . "', @Model='" . $model . "', @VIN='" . $vin . "', @Loan_Amount=" . $loan_amount . ", @APR_RATE=" . $APR_Rate;
   echo $query;
+  sqlsrv_query($conn , $query);
+    $queryErrors = print_r(sqlsrv_errors());
+    echo $queryErrors;
+
 		sqlsrv_close($conn);
 
-    }
-
-
-    if (isset($_SESSION['Is_Supervisor'])) {
+   if (isset($_SESSION['Is_Supervisor'])) {
     	header("Location: ./Supervisor/supervisorPage.php");
     }else {
       header("Location: ./Employee/mainPage.php");
