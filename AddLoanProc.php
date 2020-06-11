@@ -2,7 +2,7 @@
 #DEFINE
 session_start();
 if(!isset($_SESSION['userlogin'])) {
-  header("Location: ../Login.php");
+  header("Location: ./Login.php");
 }
 
 #Added for linux development
@@ -61,9 +61,9 @@ if ($_POST["vin"])
 
 
     if (isset($_SESSION['Is_Supervisor'])) {
-    	header("Location: ../Supervisor/supervisorPage.php");
+    	header("Location: ./Supervisor/supervisorPage.php");
     }else {
-      header("Location: ../Employee/mainPage.php");
+      header("Location: ./Employee/mainPage.php");
     }
 
 ?>
