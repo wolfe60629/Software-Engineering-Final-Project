@@ -1,13 +1,13 @@
 <?php
 	session_start();
 	if(!isset($_SESSION['userlogin'])) {
-		header("Location: ../Login.php");
+		header("Location: ./Login.php");
 	}
 
 	if (isset($_SESSION['Is_Supervisor'])) {
-		$locationToReturn = "../Supervisor/supervisorPage.php";
+		$locationToReturn = "./Supervisor/supervisorPage.php";
 	}else {
-		$locationToReturn = "../Employee/mainPage.php";
+		$locationToReturn = "./Employee/mainPage.php";
 	}
 
 	if (empty($_POST['Dealership_Name']) && empty($_GET['Dealership_ID']))
@@ -33,13 +33,13 @@
 <body>
 
     <nav class="navbar navbar-expand-md navbar-dark container-fluid-nav">
-            <img src="../Images/bankLogo.png" height="80px" alt="bankLogo">
+            <img src="./Images/bankLogo.png" height="80px" alt="bankLogo">
 
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav" style="">
                 <h1 class="text-center title-nav">Loan Request</h1>
 							<h4 class= "text-right"> <a href="<?php echo $locationToReturn; ?>" class="btn btn-secondary btn-lg active"> <b>Return To Dashboard</b></a></h4>
-              <h4 class= "text-right"> <a href="../LogoutProc.php" class="btn btn-secondary btn-lg active"> <b>Logout</b></a></h4>
+              <h4 class= "text-right"> <a href="./LogoutProc.php" class="btn btn-secondary btn-lg active"> <b>Logout</b></a></h4>
             </div>
         </div>
     </nav>
