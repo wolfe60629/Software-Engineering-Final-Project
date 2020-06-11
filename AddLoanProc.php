@@ -30,11 +30,16 @@ ini_set('display_errors', 1);
 error_reporting(-1);
 
 
-
-
-if ($_POST["username"] || $_POST["password"])
+if ($_POST["vin"])
 {
-
+  $ID = $_POST['Dealership_ID'];
+  $year = $_POST['year'];
+  $make = $_POST['make'];
+  $vin = $_POST['vin'];
+  $model = $_POST['model'];
+  $comments = $_POST['comments'];
+  $loan_amount = $_POST['loan_amount'];
+  $APR_Rate = "3.3";
     #Connect To Database
 	$conn = sqlsrv_connect($serverName, $connectionInfo);
 
@@ -46,14 +51,10 @@ if ($_POST["username"] || $_POST["password"])
 	   }
 
 	#Query Database
-#	$query = "select USER_ID, IS_SUPERVISOR from users where username= '" . $username . "' AND password_hash = HASHBYTES('SHA2_512', '" . $password . "');";
-#    $result = sqlsrv_query($conn , $query);
 
-#    $row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC);
-
-
-
-
+	$query = "exec INSERTLOANPROC @Dealer_ID=" . $ID . ", @CarYear=" . $year . ", @Make=" . $make . ", @Model=" . $model . ", @VIN=" . $vin . ", @Loan_Amount=" . $loan_amount . ", @APR_RATE=" . $APR_Rate;
+  sqlsrv_query($conn , $query);
+  echo $query;
 		sqlsrv_close($conn);
 
     }

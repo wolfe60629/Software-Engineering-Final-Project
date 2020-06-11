@@ -72,4 +72,11 @@ function sendPostAddLoanProc(Dealership_ID,Dealership_Name)  {
 $('body').append(form);
 form.submit();
 }
+function sendPostViewLoanProc(Dealership_ID)  {
+	var form = $('<form action="' + '../ViewLoanPage.php' + '" method="post">' +
+  '<input type="text" name="Dealership_ID" value="' + Dealership_ID + '" />' +
+  '</form>');
+$('body').append(form);
+form.submit();
+}
 </script>

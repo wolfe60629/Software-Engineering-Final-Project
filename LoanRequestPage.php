@@ -59,7 +59,7 @@
 		      <input type="text" name = "year" class="form-control form-control-lg" id="year" placeholder="Year" required>
 					<input type="text" name = "make" class="form-control form-control-lg" id="make" placeholder="Make" required>
 					<input type="text" name = "model" class="form-control form-control-lg" id="model" placeholder="Model" required>
-					<input type="text" name = "vin" class="form-control form-control-lg" id="vin" placeholder="VIN" required>
+					<input type="text" name = "vin" class="form-control form-control-lg" id="vin" placeholder="VIN" maxlength="17" required>
 		    </div>
 
 		    <div class="form-group col-md-4">

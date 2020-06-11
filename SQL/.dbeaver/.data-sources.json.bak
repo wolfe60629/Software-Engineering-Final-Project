@@ -9,10 +9,10 @@
 			"show-system-objects": true,
 			"read-only": false,
 			"configuration": {
-				"host": "192.168.0.50",
+				"host": "127.0.0.1",
 				"port": "1433",
 				"database": "LoanManagementProject",
-				"url": "jdbc:sqlserver://;serverName=192.168.0.50;databaseName=LoanManagementProject",
+				"url": "jdbc:sqlserver://;serverName=127.0.0.1;databaseName=LoanManagementProject",
 				"type": "dev",
 				"properties": {
 					"trustServerCertificate": "true"
