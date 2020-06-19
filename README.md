@@ -1,16 +1,16 @@
 # CSCI 3300 Software Engineering Final Project 
 
 
-#About This Program
+# About This Program
 
 This program was written specifically and exclusively for the .bank company (fake company made up). The program provides a way for the business to keep track of their auto loan portfolio. Once a banker is given a login for the program, he / she can be assigned dealerships to monitor, and keep track of. Loans that are entered in by a banker will be stored in a secure database, and cannot be deleted. 
 
 
-#Getting Started
+# Getting Started
 
 To get started, some technical knowledge is required. A user account will have to be created for any users that will need to access the platform. This can be done by executing the database’s stored procedure for adding accounts. (Detailed information for adding an account is in the technical unit) After a user account is created, the dealerships will need to be added to the database. Since the bank doesn't add or remove clients often, the feature to add or remove dealerships wasn't implemented in this release.
 
-#Accounts
+# Accounts
 
 This software’s ability to have separate user accounts was one that was crucial to its development. To create an account, please refer to the technical area of the documentation. The following are the types of accounts that a user may have:
 
@@ -18,7 +18,7 @@ A supervisor account, denoted with a “Supervisor Level” tag at the top of th
 
 An employee account is only able to view the dealerships that are assigned to the employee. To assign a dealership to an employee, please see the technical area of the documentation.
 
-#Dealer Scoring
+# Dealer Scoring
 
 Each dealership is assigned a “Dealer Score”. This score is an internal prediction on how good the customer is with the company. The score ranges from 0 to 1000, and is comprised of several predictive factors such as past loan history, past loan amounts, past interest rate amounts, and vehicle years. 
 
@@ -26,7 +26,7 @@ For example: A dealership that finances an older car for $100,000 might not have
 
 
 
-#Navigation
+# Navigation
 
 Login Screen - This page allows the user to login to the platform.  Once a user logs in to the platform, the user is redirected to his/her user dashboard. 
 
@@ -45,7 +45,7 @@ Return to Dashboard - On all forms and reports away from the dashboard there is 
 
 
 
-#Technical Unit
+# Technical Unit
 
 Security
 
