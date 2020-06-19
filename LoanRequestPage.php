@@ -47,9 +47,11 @@
 		<form class = "Vehicle_Information" action= "AddLoanProc.php" id = "Vehicle_Information" method = "POST" autocomplete="off">
 <div class="form-row">
 			<div class="col-md-4">
+				<h3>Dealership Name</h3>
 			<input type="text" style = "" name = "Dealership_Name" class="form-control form-control-lg" id="Dealership_Name" value="<?php echo $_POST['Dealership_Name']?>" readonly>
 		</div>
 		<div class="col-md-4">
+			<h3>Dealership ID</h3>
 		<input type="text" style = "margin-bottom:20px" name = "Dealership_ID" class="form-control form-control-lg" id="Dealership_ID" value="<?php echo $_POST['Dealership_ID']?>" readonly>
 	</div>
 		</div>
@@ -71,6 +73,7 @@
 		  </div>
 		  <button type="submit" class="btn btn-primary" form = "Vehicle_Information">Submit Loan</button>
 		</form>
+
 
 </body>
 </html>
