@@ -33,19 +33,29 @@ For example: A dealership that finances an older car for $100,000 might not have
 
 Login Screen - This page allows the user to login to the platform.  Once a user logs in to the platform, the user is redirected to his/her user dashboard. 
 
+![alt text](https://ibb.co/j6wK8WZ)
+
 Dashboard - This is the screen that shows the assigned dealerships for the user. If the user is a supervisor, then that user will be able to view all of the dealerships for the company. To add a new loan or view existing loans for a dealership, click on the buttons that are listed to the right of each dealer.
+
+![alt text](http://url/to/img.png)
 
 Create a Loan - This program allows a banker to create a loan for a particular dealership. Once the “create new loan” button is clicked, the dealership id and dealership name are pre-populated into the form. This leaves the banker to collect some information from the dealership. The bank will need to know what year, make, and model the loan is for, as well as the loan amount being requested. Once this form is submitted, the request will go into the system and will either be accepted or denied.
 
+![alt text](http://url/to/img.png)
+
 View Loans - Loan transaction history is easily accessible with the click of the View loans button on the users dashboard. Once this button is clicked, the user will be able to view the loans that were added to the database. Each loan is associated with a vehicle, and will list the loan information to the right of the vehicle information. 
 
+![alt text](http://url/to/img.png)
+
 Logout - User login data is session based. This means that the user can timeout of their logged in session if the user is inactive. If the user is logged out of their session, the user will be redirected to the login page upon refreshing the page. This is to ensure user security when browsing. To log out at any time, click the logout button at the top right of any page during the user’s session.
+
+![alt text](http://url/to/img.png)
 
 
 
 Return to Dashboard - On all forms and reports away from the dashboard there is an option to return to the user’s home. Doing such will abort the current process being done.
 
-
+![alt text](http://url/to/img.png)
 
 
 # Technical Unit
