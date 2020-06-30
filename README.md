@@ -5,6 +5,9 @@
 
 This program was written for a project in a software engineering class. It provided a way for a made up business to keep track of their auto loan portfolio. Once a banker is given a login for the program, he / she can be assigned dealerships to monitor, and keep track of. Loans that are entered in by a banker will be stored in a secure database, and cannot be deleted. 
 
+# Project Scope
+All project prewriting files are in the project scope folder. This includes a DFD, ERD, Front End Wireframes, and a Database Explaination.
+
 
 # Getting Started
 
