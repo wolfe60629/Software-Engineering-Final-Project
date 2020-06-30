@@ -33,7 +33,7 @@ For example: A dealership that finances an older car for $100,000 might not have
 
 Login Screen - This page allows the user to login to the platform.  Once a user logs in to the platform, the user is redirected to his/her user dashboard. 
 
-![alt text](https://ibb.co/j6wK8WZ)
+![alt text](https://ibb.co/j6wK8WZ/image.png)
 
 Dashboard - This is the screen that shows the assigned dealerships for the user. If the user is a supervisor, then that user will be able to view all of the dealerships for the company. To add a new loan or view existing loans for a dealership, click on the buttons that are listed to the right of each dealer.
 
