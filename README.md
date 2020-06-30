@@ -3,7 +3,7 @@
 
 # About This Program
 
-This program was written specifically and exclusively for the .bank company (fake company made up). The program provides a way for the business to keep track of their auto loan portfolio. Once a banker is given a login for the program, he / she can be assigned dealerships to monitor, and keep track of. Loans that are entered in by a banker will be stored in a secure database, and cannot be deleted. 
+This program was written for a project in a software engineering class. It provided a way for a made up business to keep track of their auto loan portfolio. Once a banker is given a login for the program, he / she can be assigned dealerships to monitor, and keep track of. Loans that are entered in by a banker will be stored in a secure database, and cannot be deleted. 
 
 
 # Getting Started
@@ -49,18 +49,18 @@ Return to Dashboard - On all forms and reports away from the dashboard there is 
 
 Security
 
-Database Credential Storage - All Passwords in the database are stored as hashes. No plain text passwords are kept. 
+## Database Credential Storage - All Passwords in the database are stored as hashes. No plain text passwords are kept. 
 
-Multi Level User Mode - This software has the ability to assign users different access levels. If the user is a supervisor, then the user will be able to see all of the dealerships in the database. 
+## Multi Level User Mode - This software has the ability to assign users different access levels. If the user is a supervisor, then the user will be able to see all of the dealerships in the database. 
 
 
-#SQL Stored Procedures
+# SQL Stored Procedures
 
 In this program, all major processes are added as stored procedures in the database. This is to enhance the user experience, and minimize the time spent at the database.
 
 Adding a user - To add a user to the program someone with sql credentials can add an account easily! 
 
-Procedure name - AddUserProc
+### Procedure name - AddUserProc
 
 Parameters
  @Username - varchar
@@ -69,7 +69,7 @@ Parameters
 0 for Employee
 1 for Supervisor
 
-Get Assigned Dealers - This is used at the user’s dashboard to get a list of assigned dealerships for the user
+### Get Assigned Dealers - This is used at the user’s dashboard to get a list of assigned dealerships for the user
 
 Procedure Name - GetAssignedDealers
 
@@ -77,7 +77,7 @@ Parameters
 @User_ID - INT
 
 
-Get Loan Records - This is used in the view loans page to grab the loans for a dealership. 
+### Get Loan Records - This is used in the view loans page to grab the loans for a dealership. 
 
 Procedure Name - GetLoanRecordsProc
 
@@ -85,7 +85,7 @@ Parameters
 @Dealer_ID - INT
 
 
-Insert Loan - This is used at the create a loan page to add a new loan to the system. 
+### Insert Loan - This is used at the create a loan page to add a new loan to the system. 
 
 Procedure Name -  InsertLoanProc
 
