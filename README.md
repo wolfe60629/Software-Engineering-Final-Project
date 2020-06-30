@@ -49,9 +49,11 @@ Return to Dashboard - On all forms and reports away from the dashboard there is 
 
 Security
 
-### Database Credential Storage - All Passwords in the database are stored as hashes. No plain text passwords are kept. 
+### Database Credential Storage - 
+All Passwords in the database are stored as hashes. No plain text passwords are kept. 
 
-### Multi Level User Mode - This software has the ability to assign users different access levels. If the user is a supervisor, then the user will be able to see all of the dealerships in the database. 
+### Multi Level User Mode - 
+This software has the ability to assign users different access levels. If the user is a supervisor, then the user will be able to see all of the dealerships in the database. 
 
 
 # SQL Stored Procedures
