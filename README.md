@@ -56,7 +56,7 @@ Logout - User login data is session based. This means that the user can timeout 
 
 # Technical Unit
 
-Security
+## Security
 
 ### Database Credential Storage - 
 All Passwords in the database are stored as hashes. No plain text passwords are kept. 
@@ -65,7 +65,7 @@ All Passwords in the database are stored as hashes. No plain text passwords are 
 This software has the ability to assign users different access levels. If the user is a supervisor, then the user will be able to see all of the dealerships in the database. 
 
 
-# SQL Stored Procedures
+## SQL Stored Procedures
 
 In this program, all major processes are added as stored procedures in the database. This is to enhance the user experience, and minimize the time spent at the database.
 
